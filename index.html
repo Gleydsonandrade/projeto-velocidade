@@ -44,10 +44,14 @@
             height: 350px;
             margin: 0 10px;
             text-align: justify;
-            padding: 30px;
+            padding: 20px;
             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
             border-radius: 10px;
             width: 550px;  
+        }
+
+        .corpo {
+            width: 100% ;
         }
 
         .btn {
@@ -81,13 +85,18 @@
 
         @media (max-width: 585px) {
             .container {
-                width: 420px;
+                width: 440px;
             }
             .num {
                 width: 100px;
             }
 
-            .caso {
+           
+        }
+
+        @media (max-width: 512px) {
+
+        .caso {
                 display: inline-block;
             }
 
@@ -95,6 +104,7 @@
                 display: none;
             }
         }
+
 
     </style>
      <!--CSS-END-->
@@ -104,9 +114,12 @@
     <!--HTML-START-->
    
     <div class="container">
-        <h1>Limitador de velocidade <i class='bx bxs-chevrons-down'></i></h1> 
-        <p>Sua velocidade é de</p> <input class="num" type="number" name="" id="txtv"> <p class="para">km/h</p>
-        <input class="btn" type="button" value="verificar" onclick="calcular()"> <p class="caso">km/h</p>
+
+        <div class="corpo">
+            <h1>Limitador de velocidade <i class='bx bxs-chevrons-down'></i></h1>
+            <p>Sua velocidade é de</p> <input class="num" type="number" name="" id="txtv"> <p class="para">km/h</p>
+            <input class="btn" type="button" value="verificar" onclick="calcular()"> <p class="caso">km/h</p>
+        </div>
         <div class="res"></div>
     </div>
     <!--HTML-END-->
