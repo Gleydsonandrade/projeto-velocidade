@@ -20,7 +20,14 @@
             justify-content: center;
             align-items: center;
             background-color: rgb(54, 79, 219);
+            flex-direction: column;
             
+        }
+
+        h1 {
+          color: white; 
+          font-size: 1.3rem;
+          padding: 30px;
         }
         
         p {
@@ -93,8 +100,8 @@
 
 </head>
 <body>
-
     <!--HTML-START-->
+   <h1>Estabilizador de velocidade</h1>
     <div class="container">
         <p>Sua velocidade é de</p> <input class="num" type="number" name="" id="txtv"> <p class="para">km/h</p>
         <input class="btn" type="button" value="verificar" onclick="calcular()"> <p class="caso">km/h</p>
