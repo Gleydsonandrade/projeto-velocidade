@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <title>Limitador de velocidade</title>
     
     <!--CSS-START-->
     <style>
@@ -20,15 +20,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgb(54, 79, 219);
-            
-            
+            background-color: rgb(54, 79, 219);  
         }
 
         h1 {
-          color: black; 
-          font-size: 1.3rem;
-          margin-bottom: 30px;
+            color: black; 
+            font-size: 1.3rem;
+            margin-bottom: 30px;
         }
         
         p {
@@ -50,8 +48,6 @@
             width: 600px;  
         }
 
-       
-
         .btn {
             background-color: gray;
             padding: 5px;
@@ -64,8 +60,8 @@
         }
 
         .btn:hover {
-               background-color: cadetblue;
-               color: white;
+            background-color: cadetblue;
+            color: white;
         }
 
         .num {
@@ -87,30 +83,19 @@
                 margin: 10px;
             }
             .num {
-                width: 100px;
-                
-            }
-
-           
+                width: 100px;  
+            }   
         }
-
-       
-
-
     </style>
      <!--CSS-END-->
 
 </head>
 <body>
     <!--HTML-START-->
-   
     <div class="container">
-
-        
             <h1>Limitador de velocidade <i class='bx bxs-chevrons-down'></i></h1>
             <p>Sua velocidade é de</p> <input class="num" type="number" name="" id="txtv"> <p class="para">km/h</p>
             <input class="btn" type="button" value="verificar" onclick="calcular()"> <p class="caso">km/h</p>
-       
         <div class="res"></div>
     </div>
     <!--HTML-END-->
