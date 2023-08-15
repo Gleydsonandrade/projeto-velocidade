@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!--CSS-START-->
+    <style>
+     
+        * {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(54, 79, 219);
+            
+        }
+
+
+        p {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background-color: #f3f2f3;
+            display: block;
+            height: 350px;
+            
+            text-align: justify;
+            padding: 30px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+            border-radius: 10px;
+            width: 550px;
+            
+        }
+
+        .btn {
+            background-color: gray;
+            padding: 5px;
+            color: white;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+            transition: .2s;
+            
+            
+        }
+
+        .btn:hover {
+               background-color: cadetblue;
+               color: white;
+        }
+
+        .num {
+            display: inline;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            width: 150px;
+        }
+
+        @media (max-width: 585px) {
+            .container {
+                width: 420px;
+            }
+
+            .num {
+                width: 100px;
+                
+           
+
+            }
+        }
+
+        @media (max-width: 445px) {
+            .num {
+                display: block;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 100px;
+                
+            }
+
+          
+        }
+    </style>
+     <!--CSS-END-->
+</head>
+<body>
+
+
+    <!--HTML-START-->
+    <div class="container">
+        <p>Sua velocidade é de</p> <input class="num" type="number" name="" id="txtv"> <p class="para">km/h</p>
+        <input class="btn" type="button" value="verificar" onclick="calcular()">
+        <div class="res"></div>
+    </div>
+    <!--HTML-END-->
+   
+ 
+    
+
+   <!--javaScrip-start-->
+    <script>
+        function calcular() {
+            var txtv = document.getElementById('txtv')
+            var res = document.querySelector('.res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade é de <strong>${vel}</strong> km/h</p>`
+
+        if (vel > 60) {
+        res.innerHTML += `<p> Vc está multado por excesso de velocidade </p>`
+        res.style.color = 'red'
+
+       
+        } else {
+            res.style.color = 'darkgreen'
+        }
+
+        
+
+        res.innerHTML += `<p> Dirija sempre com sinto de segurança!</p>`   
+       }   
+    </script>
+     <!--javaScrip-end-->
+</body>
+</html>
