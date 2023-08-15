@@ -67,12 +67,20 @@
             width: 150px;
         }
 
+        .caso {
+            display: none;
+        }
+
         @media (max-width: 585px) {
             .container {
                 width: 420px;
             }
             .num {
                 width: 100px;
+            }
+
+            .caso {
+                display: inline-block;
             }
         }
 
@@ -85,7 +93,7 @@
     <!--HTML-START-->
     <div class="container">
         <p>Sua velocidade é de</p> <input class="num" type="number" name="" id="txtv"> <p class="para">km/h</p>
-        <input class="btn" type="button" value="verificar" onclick="calcular()">
+        <input class="btn" type="button" value="verificar" onclick="calcular()"> <p class="caso">km/h</p>
         <div class="res"></div>
     </div>
     <!--HTML-END-->
